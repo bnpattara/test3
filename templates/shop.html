@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - NatureBuff</title>
+  <meta name="description" content="Browse our collection of sustainable hygiene products for adventurers and eco-conscious individuals.">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Load fonts -->
+  <link rel="preload" href="/assets/fonts/Forta-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Forta-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Forta-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- Header will be included via layout/header.html -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="container py-8">
+        <div class="shop-header">
+          <div>
+            <h1 class="heading-lg">Shop</h1>
+            <p class="text-muted">Browse our collection of sustainable hygiene products</p>
+          </div>
+          <div class="shop-controls">
+            <button class="btn btn-outline btn-sm mobile-filter-btn" id="mobile-filter-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+              </svg>
+              Filter
+            </button>
+            <div class="select-wrapper">
+              <select id="sort-select" class="select">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="shop-layout">
+          <!-- Filters Sidebar -->
+          <aside class="filters-sidebar" id="filters-sidebar">
+            <div class="filter-group">
+              <h3 class="filter-heading">Product Type</h3>
+              <div class="filter-options">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-wipes">
+                  <span class="checkbox-text">Buff Wipes</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-soap">
+                  <span class="checkbox-text">Soap Bars</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-accessories">
+                  <span class="checkbox-text">Accessories</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-divider"></div>
+            
+            <div class="filter-group">
+              <h3 class="filter-heading">Price Range</h3>
+              <div class="filter-options">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-under-20">
+                  <span class="checkbox-text">Under $20</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-20-50">
+                  <span class="checkbox-text">$20 - $50</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-over-50">
+                  <span class="checkbox-text">Over $50</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-divider"></div>
+            
+            <div class="filter-group">
+              <h3 class="filter-heading">Scent</h3>
+              <div class="filter-options">
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-unscented">
+                  <span class="checkbox-text">Unscented</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-lavender">
+                  <span class="checkbox-text">Lavender</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-eucalyptus">
+                  <span class="checkbox-text">Eucalyptus</span>
+                </label>
+                <label class="checkbox-label">
+                  <input type="checkbox" class="checkbox" id="filter-citrus">
+                  <span class="checkbox-text">Citrus</span>
+                </label>
+              </div>
+            </div>
+            
+            <div class="filter-divider"></div>
+            
+            <button class="btn btn-outline btn-full">Reset Filters</button>
+          </aside>
+
+          <!-- Mobile Filters Drawer -->
+          <div class="mobile-filters-drawer" id="mobile-filters-drawer">
+            <div class="mobile-filters-header">
+              <h2 class="mobile-filters-title">Filters</h2>
+              <button class="btn btn-ghost mobile-filters-close" id="mobile-filters-close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+            
+            <!-- Mobile filter content will be cloned from desktop filters -->
+            <div class="mobile-filters-content" id="mobile-filters-content"></div>
+            
+            <div class="mobile-filters-footer">
+              <button class="btn btn-outline">Reset</button>
+              <button class="btn btn-primary">Apply Filters</button>
+            </div>
+          </div>
+
+          <!-- Products Grid -->
+          <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes - Original" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">
+                  <a href="/shop/buff-wipes" class="product-link">Buff Wipes - Original</a>
+                </h3>
+                <p class="product-description">Biodegradable bamboo wipes</p>
+                <div class="product-purchase">
+                  <span class="product-price">$12.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes - Travel Pack" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Buff Wipes - Travel Pack</h3>
+                <p class="product-description">10-pack for on-the-go</p>
+                <div class="product-purchase">
+                  <span class="product-price">$8.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Eucalyptus Soap Bar" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Eucalyptus Soap Bar</h3>
+                <p class="product-description">Refreshing natural soap</p>
+                <div class="product-purchase">
+                  <span class="product-price">$9.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Lavender Soap Bar" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Lavender Soap Bar</h3>
+                <p class="product-description">Calming natural soap</p>
+                <div class="product-purchase">
+                  <span class="product-price">$9.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes - Family Pack" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Buff Wipes - Family Pack</h3>
+                <p class="product-description">30-pack for the whole family</p>
+                <div class="product-purchase">
+                  <span class="product-price">$24.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+              <div class="product-image-container">
+                <img src="/assets/images/placeholder.svg" alt="Citrus Soap Bar" class="product-image">
+              </div>
+              <div class="product-details">
+                <h3 class="product-title">Citrus Soap Bar</h3>
+                <p class="product-description">Energizing natural soap</p>
+                <div class="product-purchase">
+                  <span class="product-price">$9.99</span>
+                  <button class="btn btn-sm btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer will be included via layout/footer.html -->
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/shop.js"></script>
+</body>
+</html>
+

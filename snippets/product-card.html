@@ -1,0 +1,39 @@
+<div class="product-card">
+  <div class="product-image-container">
+    <a href="{{ product.url }}">
+      <img src="{{ product.featured_image | default: '/assets/images/placeholder.svg' }}" alt="{{ product.title }}" class="product-image">
+    </a>
+    {% if product.on_sale %}
+      <span class="product-badge sale">Sale</span>
+    {% endif %}
+    {% if product.sold_out %}
+      <span class="product-badge sold-out">Sold out</span>
+    {% endif %}
+  </div>
+  <div class="product-details">
+    <h3 class="product-title">
+      <a href="{{ product.url }}" class="product-link">{{ product.title }}</a>
+    </h3>
+    <p class="product-description">{{ product.description | strip_html | truncatewords: 10 }}</p>
+    <div class="product-purchase">
+      <span class="product-price">
+        {% if product.on_sale %}
+          <span class="product-price-sale">{{ product.price | money }}</span>
+          <span class="product-price-regular">{{ product.compare_at_price | money }}</span>
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      </span>
+      <button class="btn btn-sm btn-primary add-to-cart-button" 
+              data-product-id="{{ product.id }}"
+              {% if product.sold_out %}disabled{% endif %}>
+        {% if product.sold_out %}
+          Sold out
+        {% else %}
+          Add to Cart
+        {% endif %}
+      </button>
+    </div>
+  </div>
+</div>
+

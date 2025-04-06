@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buff Wipes - NatureBuff</title>
+  <meta name="description" content="Biodegradable bamboo wipes for on-the-go freshness. Perfect for hiking, camping, travel, or everyday use.">
+  <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <!-- Load fonts -->
+  <link rel="preload" href="/assets/fonts/Forta-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Forta-Medium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/Forta-Bold.woff2" as="font" type="font/woff2" crossorigin>
+</head>
+<body>
+  <div class="site-wrapper">
+    <!-- Header will be included via layout/header.html -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <div class="container py-8">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+          <a href="/" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-separator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </span>
+          <a href="/shop" class="breadcrumb-link">Shop</a>
+          <span class="breadcrumb-separator">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </span>
+          <span class="breadcrumb-current">Buff Wipes</span>
+        </div>
+
+        <!-- Product Overview -->
+        <div class="product-overview">
+          <!-- Product Gallery -->
+          <div class="product-gallery" id="product-gallery">
+            <div class="product-main-image-container">
+              <img src="/assets/images/placeholder.svg" alt="Buff Wipes product package front view" class="product-main-image" id="product-main-image">
+              <div class="gallery-controls">
+                <button class="gallery-control prev" id="gallery-prev">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button class="gallery-control next" id="gallery-next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+                <button class="gallery-control zoom" id="gallery-zoom">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="product-thumbnails" id="product-thumbnails">
+              <button class="thumbnail-item active" data-index="0">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes product package front view" class="thumbnail-image">
+              </button>
+              <button class="thumbnail-item" data-index="1">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes product package back view with ingredients" class="thumbnail-image">
+              </button>
+              <button class="thumbnail-item" data-index="2">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes being used outdoors" class="thumbnail-image">
+              </button>
+              <button class="thumbnail-item" data-index="3">
+                <img src="/assets/images/placeholder.svg" alt="Buff Wipes biodegradation demonstration" class="thumbnail-image">
+              </button>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="product-details">
+            <h1 class="product-title">Buff Wipes</h1>
+            <div class="product-rating">
+              <div class="stars">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="star">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="reviews-count">(124 reviews)</span>
+            </div>
+            
+            <div class="product-price-container">
+              <p class="product-price">$12.99</p>
+              <p class="product-subscription-price">
+                or subscribe and save 15% ($11.04 / pack)
+              </p>
+            </div>
+
+            <p class="product-description">
+              Biodegradable bamboo wipes for on-the-go freshness. Perfect for hiking, camping, travel, or everyday use. 
+              Our eco-friendly wipes keep you clean without harming the planet.
+            </p>
+
+            <!-- Scent Selection -->
+            <div class="product-option">
+              <h3 class="option-label">Scent</h3>
+              <div class="option-buttons">
+                <button class="option-button selected">Unscented</button>
+                <button class="option-button">Lavender</button>
+                <button class="option-button">Eucalyptus</button>
+              </div>
+            </div>
+
+            <!-- Pack Size -->
+            <div class="product-option">
+              <h3 class="option-label">Pack Size</h3>
+              <div class="option-buttons">
+                <button class="option-button">10-pack</button>
+                <button class="option-button selected">30-pack</button>
+                <button class="option-button">60-pack</button>
+              </div>
+            </div>
+
+            <!-- Quantity -->
+            <div class="product-option">
+              <h3 class="option-label">Quantity</h3>
+              <div class="quantity-selector">
+                <button class="quantity-btn decrease" id="decrease-quantity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <input type="number" value="1" min="1" class="quantity-input" id="quantity">
+                <button class="quantity-btn increase" id="increase-quantity">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Purchase Options -->
+            <div class="purchase-options">
+              <button class="btn btn-primary btn-lg btn-full">Add to Cart</button>
+              <button class="btn btn-outline btn-lg btn-full">Subscribe & Save 15%</button>
+            </div>
+
+            <!-- Key Features -->
+            <div class="product-features">
+              <div class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                  <path d="M12 2L22 8.5V15.5L12 22L2 15.5V8.5L12 2Z"></path>
+                  <path d="M12 22V15.5"></path>
+                  <path d="M22 8.5L12 15.5L2 8.5"></path>
+                  <path d="M2 15.5L12 8.5L22 15.5"></path>
+                  <path d="M12 2V8.5"></path>
+                </svg>
+                <p class="feature-text">100% biodegradable bamboo fiber</p>
+              </div>
+              <div class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                  <path d="M21.5 2v6h-6"></path>
+                  <path d="M2.5 22v-6h6"></path>
+                  <path d="M22 11.5A10 10 0 0 0 3.2 7.2M2 12.5a10 10 0 0 0 18.8 4.2"></path>
+                </svg>
+                <p class="feature-text">Breaks down naturally in 4-6 weeks</p>
+              </div>
+              <div class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <p class="feature-text">Free from harsh chemicals, alcohol, and synthetic fragrances</p>
+              </div>
+              <div class="feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-icon">
+                  <rect x="1" y="3" width="15" height="13"></rect>
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                  <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                  <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                </svg>
+                <p class="feature-text">Free shipping on orders over $35</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Details Tabs -->
+        <div class="product-tabs" id="product-tabs">
+          <div class="tabs-header">
+            <button class="tab-button active" data-tab="description">Description</button>
+            <button class="tab-button" data-tab="ingredients">Ingredients</button>
+            <button class="tab-button" data-tab="how-to-use">How to Use</button>
+            <button class="tab-button" data-tab="reviews">Reviews</button>
+          </div>
+          
+          <div class="tab-content active" id="description-tab">
+            <div class="tab-content-grid">
+              <div class="tab-content-column">
+                <h2 class="tab-heading">Stay Fresh Anywhere</h2>
+                <p class="tab-text">
+                  Buff Wipes are designed for adventurers, travelers, and anyone who wants to stay fresh on the go without compromising on sustainability. Our biodegradable bamboo wipes provide effective cleansing while being gentle on both your skin and the environment.
+                </p>
+                <p class="tab-text">
+                  Unlike conventional wipes that contain plastic fibers and can take hundreds of years to break down, Buff Wipes are made from 100% biodegradable bamboo fiber that naturally decomposes in just 4-6 weeks when properly disposed of.
+                </p>
+                <p class="tab-text">
+                  Each wipe is infused with gentle, plant-based cleansers and essential oils (in scented varieties) to leave your skin feeling clean and refreshed without harsh chemicals or synthetic fragrances.
+                </p>
+              </div>
+              <div class="tab-content-column">
+                <h3 class="tab-subheading">Features & Benefits</h3>
+                <ul class="features-list">
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Biodegradable bamboo fiber breaks down in 4-6 weeks</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Plastic-free, compostable packaging</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>pH balanced and suitable for all skin types</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Free from alcohol, parabens, and synthetic fragrances</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Available in Unscented, Lavender, and Eucalyptus</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Compact, resealable packaging perfect for travel</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>Cruelty-free and never tested on animals</span>
+                  </li>
+                  <li class="feature-list-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feature-check">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                    <span>1% of sales donated to environmental nonprofits</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="ingredients-tab">
+            <!-- Ingredients tab content -->
+          </div>
+          
+          <div class="tab-content" id="how-to-use-tab">
+            <!-- How to use tab content -->
+          </div>
+          
+          <div class="tab-content" id="reviews-tab">
+            <!-- Reviews tab content -->
+          </div>
+        </div>
+
+        <!-- Related Products -->
+        <section class="related-products">
+          <div class="section-header">
+            <h2 class="heading-lg text-primary">You May Also Like</h2>
+            <div class="carousel-controls">
+              <button class="carousel-control prev" id="related-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              <button class="carousel-control next" id="related-next">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <div class="related-products-carousel" id="related-products-carousel">
+            <!-- Related products will be inserted here -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer will be included via layout/footer.html -->
+    <div id="footer-placeholder"></div>
+  </div>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/product.js"></script>
+</body>
+</html>
+
